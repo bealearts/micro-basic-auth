@@ -3,7 +3,7 @@ import test from 'ava';
 import listen from 'test-listen';
 import fetch from 'node-fetch';
 
-import basicAuth from '..';
+import basicAuth from '../src/basicAuth';
 
 const { send } = micro;
 let service;

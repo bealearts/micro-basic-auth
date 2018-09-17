@@ -2,11 +2,11 @@
   "name": "micro-basic-auth",
   "version": "1.0.0",
   "description": "Basic Auth for micro based micro-services",
-  "main": "src/basicAuth.mjs",
+  "main": "dist/basicAuth.js",
   "scripts": {
-    "build": "",
+    "build": "babel src/basicAuth.mjs --out-file dist/basicAuth.js",
     "lint": "eslint src/**/*.mjs test/**/*.mjs",
-    "test": "npm run lint && ava test/basicAuth.test.mjs"
+    "test": "npm run lint && ava test/basicAuth.test.mjs && npm run build"
   },
   "keywords": [
     "micro",
@@ -32,6 +32,10 @@
   },
   "devDependencies": {
     "ava": "^1.0.0-beta.8",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "eslint": "^5.6.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
