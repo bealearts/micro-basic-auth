@@ -1,0 +1,22 @@
+{
+  "env": {
+    "node": true
+  },
+  "extends": "airbnb-base",
+  settings: {
+    "import/resolver": {
+      node: { extensions: [".js", ".mjs"] }
+    }
+  },
+  "rules": {
+    "import/extensions": ["error", "always", {
+      js: "never",
+      mjs: "never",
+    }],
+    "comma-dangle": ["error", "never"],
+    "no-use-before-define": ["off"],
+    "no-unused-vars": ["warn"],
+    "no-shadow": ["off"],
+    "no-plusplus": ["off"]
+  }
+}

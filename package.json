@@ -1,0 +1,36 @@
+{
+  "name": "micro-basic-auth",
+  "version": "1.0.0",
+  "description": "Basic Auth for micro based microservices",
+  "main": "src/basicAuth.mjs",
+  "scripts": {
+    "build": "",
+    "lint": "eslint src/**/*.mjs test/**/*.mjs",
+    "test": "npm run lint && ava test/basicAuth.test.mjs"
+  },
+  "keywords": [
+    "micro",
+    "basic",
+    "auth",
+    "basic-auth",
+    "microauth"
+  ],
+  "author": "David Beale",
+  "license": "MIT",
+  "dependencies": {
+    "basic-auth": "^2.0.0"
+  },
+  "peerDependencies": {
+    "micro": "^9.3.3"
+  },
+  "devDependencies": {
+    "ava": "^1.0.0-beta.8",
+    "eslint": "^5.6.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "esm": "^3.0.83",
+    "micro": "^9.3.3",
+    "node-fetch": "^2.2.0",
+    "test-listen": "^1.1.0"
+  }
+}
