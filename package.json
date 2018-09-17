@@ -4,7 +4,7 @@
   "description": "Basic Auth for micro based micro-services",
   "main": "dist/basicAuth.js",
   "scripts": {
-    "build": "babel src/basicAuth.mjs --out-file dist/basicAuth.js",
+    "build": "mkdir -p dist && babel src/basicAuth.mjs -o basicAuth.js",
     "lint": "eslint src/**/*.mjs test/**/*.mjs",
     "test": "npm run lint && ava test/basicAuth.test.mjs && npm run build"
   },
