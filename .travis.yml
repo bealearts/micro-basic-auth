@@ -2,11 +2,10 @@ language: node_js
 node_js:
 - 8
 deploy:
-  matrix:
-  - provider: npm
-    email: david.beale@bealearts.co.uk
-    api_key:
-      secure: yZ6tJSfNlP6EdfElov1IyB66kHTATsRwnZ9XbKW6DTr5xb/2XTk1/QWrh1ixMNCwpBGmNh2jeEG3nRfdWoKAAF/yPzyndGwyhIRP0psCi2O7i5ObG25A3Tgj7S12FQEbp5Hea4dK2UxX+AIZQTxqx3Ipoonui4hL6f4ev6+gk5qnw+tplEAJXsKQFvS7rZyd+G6z99ZyiCAco/dbCDdDsXTxuxwTxjiR1zugONMw7oTR+swryPdJ0SBHsIOPaA9eWkUhb/sDMVF+v6ybrQxdlnsaFR0oRGHih33pABYnCJ2wEr1a8Kbxreq14Fvu3DFpzEsJrk6d46uqn9GzFh04fhVM8VPG55/cFSUnJVo0DQ2GUFb5o+EU5vgc6y+aspNR0xCc+oxARBM7KcE2nqmKUemmZLah1uL9LzLTXvcEQFJ5CS11Gs1Kb0rnMrAmZlxTpD/s8sd85Yy+3s8yARh3weLyTX9Gg+74dpXygaVcm6nFtvfYxaP4b+mCS7cgs9/5FlDXPVz7BlBKIaxznjZEjfYWVi1qlP86bnETvBA3FNq0+4S0FNh962XcQv+6nmltixQHmJ4IAUp362hggZgvwcddQ/ZCcHYExcp4qCpqywGN3khVTPHUpJ78DDnqglNIQarUeGDWRcOdM5M1+TNjkfY4V345b0uQIq2liCUKj+8=
-    on:
-      tags: true
-      repo: bealearts/micro-basic-auth
+  provider: npm
+  email: david.beale@bealearts.co.uk
+  api_key:
+    secure: etEUjy6s6RJAKG1YRS5/ib+f7dmy6GccJEMz7Fp2djZai9tCB5GNsT0pAgGGnh38XDzwuVWh1bCLcido37VhNZD+lXnasdZwmjvHLrqPKi7OwMjO7xi4mxxc3znhZWPuIL5k+bZPHlyNQIZf5I+fmkSfHiVHvYzYII4XltdjIZWFhhajeYfuz6eDUPJgSfjWJqr4klZ6znl1XVtbqRfSdbDY2uH0xmr/doIzW5hCseg5YA+XfgWIdOVsyhsLf/53rxm1DfljV0TY3Oim6obgJYVvVbHQVbpypjJifs+Dkebx9QdoCedQMNjZaDtg6Jl9VMa+nBQ7aaFbsHoFO72ecJNcEbw3yw5+0p7/Y2zY7ezGFoEjzTMUTzIhGd0ZB+FsVN9klzISFoG2obuOrBZ4Ojdq49QM6uNRx289CDY/ly5QnOe8e+h3TyNUk3FySLvOe1jmltBzKbjnBR/djDdJges1ExgQsW0lxilIAm6b7/pmSSgbjO3q2rhpbAoTeyPZ2iDxcYYhHMassIMB2sOomz3Dkl6ZpIzSB3zHeQvD6E5kFwGXvlhQWoFqxbDIVOrU9I+GKZSCMJa/wdK8duoDgvRbUUUIAAHPXIGF2n7v5VCkEoMyDBZLbCcHUBF53wRlnLcwXplE407Py5kF2woywTJMmZCY8RSGJwSWsgwEZg4=
+  on:
+    tags: true
+    repo: bealearts/micro-basic-auth
