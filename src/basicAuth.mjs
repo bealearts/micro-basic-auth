@@ -16,24 +16,31 @@ export default function basicAuth(options) {
     const credentials = auth(req);
 
     if (!credentials) {
-      res.setHeader('WWW-Authenticate', `Basic realm="${opts.realm}"`);
+      challenge(res, opts);
       return send(res, 401, 'Access denied');
     }
 
     if (credentials.name !== opts.username || credentials.pass !== opts.password) {
       return handler(req, res, {
         err: new Error('Invalid Username or Password'),
-        provider
+        provider,
+        realm: opts.realm
       });
     }
 
     return handler(req, res, {
       result: {
         provider,
+        realm: opts.realm,
         info: {
-          name: credentials.name
+          username: credentials.name
         }
       }
     });
   };
+}
+
+
+export function challenge(res, auth) {
+  res.setHeader('WWW-Authenticate', `Basic realm="${auth.realm}"`);
 }

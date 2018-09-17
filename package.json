@@ -1,7 +1,7 @@
 {
   "name": "micro-basic-auth",
   "version": "1.0.0",
-  "description": "Basic Auth for micro based microservices",
+  "description": "Basic Auth for micro based micro-services",
   "main": "src/basicAuth.mjs",
   "scripts": {
     "build": "",
