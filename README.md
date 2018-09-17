@@ -1,4 +1,4 @@
-# micro-basic-auth
+# micro-basic-auth [![Build Status](https://travis-ci.org/bealearts/micro-basic-auth.png?branch=master)](https://travis-ci.org/bealearts/micro-basic-auth) [![npm version](https://badge.fury.io/js/micro-basic-auth.svg)](http://badge.fury.io/js/micro-basic-auth) [![Dependency Status](https://david-dm.org/bealearts/micro-basic-auth.png)](https://david-dm.org/bealearts/micro-basic-auth)
 
 Basic Auth for [micro](https://github.com/zeit/micro) based micro-services
 

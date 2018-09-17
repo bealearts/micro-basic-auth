@@ -1,6 +1,6 @@
 {
   "name": "micro-basic-auth",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Basic Auth for micro based micro-services",
   "main": "src/basicAuth.mjs",
   "scripts": {
@@ -15,7 +15,14 @@
     "basic-auth",
     "microauth"
   ],
-  "author": "David Beale",
+  "author": {
+    "name": "David Beale",
+    "url": "http://bealearts.co.uk/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:BealeARTS/micro-basic-auth.git"
+  },
   "license": "MIT",
   "dependencies": {
     "basic-auth": "^2.0.0"
