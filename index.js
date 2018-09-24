@@ -1,2 +1,2 @@
 // Export for commonjs
-modules.export = require('./dist/tree');
+modules.export = require('./dist/basicAuth');
