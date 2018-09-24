@@ -1,6 +1,6 @@
 {
   "name": "micro-basic-auth",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Basic Auth for micro based micro-services",
   "scripts": {
     "build": "mkdir -p dist && babel src/basicAuth.mjs -o dist/basicAuth.js",
