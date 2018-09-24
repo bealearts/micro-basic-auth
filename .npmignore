@@ -1,2 +1,5 @@
 *
-!dist
+!dist/*
+!src/*
+!index.js
+!index.mjs
