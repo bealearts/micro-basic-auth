@@ -30,8 +30,11 @@ const handler = async (req, res, auth) => {
     // Error handler
     console.error(auth.err);
 
-    challenge(res, auth); // If you want to prompt for credentials again
-
+    // If you want to prompt for credentials again
+    challenge(res, auth);
+    return send(res, 401, 'Access denied');
+    
+    // Otherwise
     return send(res, 403, 'Forbidden');
   }
 
