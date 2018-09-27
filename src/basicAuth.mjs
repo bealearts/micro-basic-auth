@@ -9,10 +9,11 @@ export default function basicAuth(options) {
     realm: '',
     username: '',
     password: '',
+    validate: defaultValidate,
     ...options
   };
 
-  return handler => (req, res) => {
+  return handler => async (req, res) => {
     const credentials = auth(req);
 
     if (!credentials) {
@@ -20,7 +21,8 @@ export default function basicAuth(options) {
       return send(res, 401, 'Access denied');
     }
 
-    if (credentials.name !== opts.username || credentials.pass !== opts.password) {
+    const valid = await opts.validate(credentials.name, credentials.pass, opts);
+    if (!valid) {
       return handler(req, res, {
         err: new Error('Invalid Username or Password'),
         provider,
@@ -43,4 +45,8 @@ export default function basicAuth(options) {
 
 export function challenge(res, auth) {
   res.setHeader('WWW-Authenticate', `Basic realm="${auth.realm}"`);
+}
+
+function defaultValidate(username, password, opts) {
+  return username === opts.username && password === opts.password;
 }

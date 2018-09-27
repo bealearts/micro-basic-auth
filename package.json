@@ -5,7 +5,8 @@
   "scripts": {
     "build": "mkdir -p dist && babel src/basicAuth.mjs -o dist/basicAuth.js",
     "lint": "eslint src/**/*.mjs test/**/*.mjs",
-    "test": "npm run lint && ava test/basicAuth.test.mjs && npm run build"
+    "test:unit": "nyc --extension .mjs --check-coverage --lines 95 --functions 95 --branches 95 ava test/basicAuth.test.mjs",
+    "test": "npm run lint && npm run test:unit && npm run build"
   },
   "keywords": [
     "micro",
@@ -41,6 +42,7 @@
     "esm": "^3.0.83",
     "micro": "^9.3.3",
     "node-fetch": "^2.2.0",
+    "nyc": "^13.0.1",
     "test-listen": "^1.1.0"
   }
 }

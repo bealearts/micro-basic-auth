@@ -9,11 +9,20 @@ Basic Auth for [micro](https://github.com/zeit/micro) based micro-services
 import { send } from 'micro';
 import basicAuth, { challenge } from 'micro-basic-auth';
 
+/** Use default validate **/
 const options = {
   realm: 'MyApp',
   username: 'Bob',
   password: 'secret'
 };
+/** or supply a function **/
+const options = {
+  realm: 'MyApp',
+  validate: async (username, password, options) => {
+    return true // if valid
+  }
+};
+/********/
 
 // Third `auth` argument will provide error or result of authentication
 // so it will { err: errorObject} or { result: {
@@ -33,7 +42,7 @@ const handler = async (req, res, auth) => {
     // If you want to prompt for credentials again
     challenge(res, auth);
     return send(res, 401, 'Access denied');
-    
+
     // Otherwise
     return send(res, 403, 'Forbidden');
   }
